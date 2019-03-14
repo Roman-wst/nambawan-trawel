@@ -1,8 +1,55 @@
-@font-face {
-  font-family: Relwww;
-  src: "../fonts/raleway/Raleway-Black.ttf";
+@import "variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+
+@import "fonts";
+
+
+h1 {
+  font: 56px $font-family-raleway-extrabold;
 }
 body {
-  background-color: #fff;
-  color: 333;
+  padding-left: 100px;
 }
+
+.nav-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+}
+
+
+.section {
+
+  &-first {
+    position: relative;
+    background: url(../img/mountain.jpg) center center no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+    .section-content {
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+
+.page-footer {
+  min-height: 200px;
+  background-color: $color-green;
+}
+

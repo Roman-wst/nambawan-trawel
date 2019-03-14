@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Nambawan Trawel - организуем корпоративное путешествие для Ваших сотрудников и клиентов</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link href="scripts/onepage-scroll.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<script src="node_modules/fullpage.js/dist/fullpage.js"></script>-->
+    <script src="scripts/jquery.onepage-scroll.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".slides").onepage_scroll({
+                sectionContainer: "section",
+                easing: "ease",
+
+                animationTime: 1000,
+                pagination: true,
+                updateURL: false,
+                beforeMove: function(index) {},
+                afterMove: function(index) {},
+                loop: false,
+                keyboard: true,
+                responsiveFallback: false,
+                direction: "vertical"
+            });
+        });
+
+    </script>
 </head>
 <body>
+
+    <div class="nav-left d-flex flex-column justify-content-between">
+        <div class="menu">Меню</div>
+        <div class="social">Инстаграм / Вконтакте</div>
+    </div>
+
+    <div class="slides">
+        <section class="section section-first">
+            <div class="section-content">
+                <img src="img/logo.png" alt="Nambawan Travel" />
+                <a href="tel:+375299876543" >+375 29 987 65 43</a>
+                <div>Обратный звонок</div>
+
+
+                <div> Мы в Nambawan Trawel</div>
+                <h1 class="section-title">Организуем корпоративное путешествие для Ваших сотрудников и клиентов</h1>
+
+                <div class="our-benefits">
+                    <div class="our-benefit">Повышаем лояльность сотрудников;</div>
+                    <div class="our-benefit">Увеличиваем мотивацию сотрудников</div>
+                    <div class="our-benefit">Улучшаем имидж компании</div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="section section-second">
+2
+        </section>
+
+        <section class="section section-third">
+3
+        </section>
+
+
+    </div>
+
+    <footer class="page-footer">
+
+    </footer>
 
 </body>
 </html>
