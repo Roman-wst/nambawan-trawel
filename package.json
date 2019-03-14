@@ -1,0 +1,24 @@
+{
+  "name": "nambawan-trawel",
+  "version": "1.0.0",
+  "description": "Layout Nambawan Trawel",
+  "main": "index.js",
+  "dependencies": {
+    "fullpage.js": "^3.0.4",
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roman-wst/nambawan-trawel.git"
+  },
+  "author": "Tyurin Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roman-wst/nambawan-trawel/issues"
+  },
+  "homepage": "https://github.com/Roman-wst/nambawan-trawel#readme"
+}
