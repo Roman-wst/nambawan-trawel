@@ -1,6 +1,7 @@
 /* variables*/
 /* fonts */
 /* colors */
+/* other dimensions */
 /* bootstrap variable */
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
@@ -3424,39 +3425,91 @@ template {
   font-family: Raleway;
   src: url(../fonts/raleway/Raleway-Light.ttf);
   font-weight: 300; }
+body {
+  padding-left: 80px; }
+
+strong, b {
+  font-family: Raleway-ExtraBold, sans-serif; }
+
 h1 {
   font: 56px Raleway-ExtraBold, sans-serif; }
-
-body {
-  padding-left: 100px; }
 
 .nav-left {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 80px;
   height: 100%;
   z-index: 100;
   background-color: white; }
 
-.section-first {
-  position: relative;
-  background: url(../img/mountain.jpg) center center no-repeat;
-  background-size: cover; }
-  .section-first::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2); }
-  .section-first .section-content {
+.social {
+  display: flex;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  padding: 10px; }
+
+.container-fluid {
+  max-width: 1140px; }
+
+.section {
+  padding: 45px 100px 0 50px; }
+  .section-full-height {
+    height: 100vh; }
+  .section-first {
     position: relative;
-    z-index: 10; }
+    color: #fff;
+    background: url(../img/mountain.jpg) center center no-repeat;
+    background-size: cover; }
+    .section-first::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(21, 24, 30, 0.7); }
+    .section-first .section-content {
+      position: relative;
+      z-index: 10; }
 
 .page-footer {
-  min-height: 200px;
-  background-color: #10e08b; }
+  padding: 85px 10px 50px 50px;
+  background-color: #303030; }
+
+.tech-task-label {
+  font-family: Raleway-ExtraBold, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 26px;
+  color: #979797;
+  text-transform: uppercase; }
+.tech-task-text {
+  font-family: Raleway, sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #fff; }
+.tech-task-title {
+  color: #10e08b;
+  font-family: Raleway-ExtraBold, sans-serif;
+  font-size: 14px;
+  line-height: 56px;
+  margin-top: 76px;
+  text-transform: uppercase; }
+.tech-task-desc {
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff; }
+.tech-task-title, .tech-task-desc, .tech-task-faq {
+  text-align: center; }
+.tech-task-faq {
+  color: #adadad;
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  margin-top: 18px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

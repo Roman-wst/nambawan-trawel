@@ -1,0 +1,52 @@
+.page-footer {
+  padding: 85px 10px 50px 50px;
+  background-color: #303030;
+}
+
+
+.tech-task {
+  &-label {
+    font-family: $font-family-raleway-extrabold;
+    font-size: 12px;
+    line-height: 18px;
+    padding-bottom: 26px;
+    color: #979797;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-family: $font-family-raleway;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #fff;
+  }
+
+  &-title {
+    color: $color-green;
+    font-family: $font-family-raleway-extrabold;
+    font-size: 14px;
+    line-height: 56px;
+    margin-top: 76px;
+    text-transform: uppercase;
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+  }
+  &-title, &-desc, &-faq {
+    text-align: center;
+  }
+
+  &-faq {
+    color: #adadad;
+    font-family: $font-family-raleway;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: 18px;
+    text-transform: uppercase;
+  }
+}

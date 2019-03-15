@@ -6,29 +6,35 @@
 
 @import "fonts";
 
+body {
+  padding-left: $nav-left-width;
+}
+
+strong, b {
+  font-family: $font-family-raleway-extrabold;
+}
 
 h1 {
   font: 56px $font-family-raleway-extrabold;
 }
-body {
-  padding-left: 100px;
-}
 
-.nav-left {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100%;
-  z-index: 100;
-  background-color: white;
-}
 
+
+
+@import "nav-left";
+
+.container-fluid {
+  max-width: 1140px;
+}
 
 .section {
-
+  padding: 45px 100px 0 50px;
+  &-full-height {
+    height: 100vh;
+  }
   &-first {
     position: relative;
+    color: #fff;
     background: url(../img/mountain.jpg) center center no-repeat;
     background-size: cover;
     &::before {
@@ -38,7 +44,7 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(21, 24, 30, .7);
     }
     .section-content {
       position: relative;
@@ -47,9 +53,4 @@ body {
   }
 }
 
-
-.page-footer {
-  min-height: 200px;
-  background-color: $color-green;
-}
-
+@import 'footer';

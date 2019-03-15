@@ -4,73 +4,93 @@
     <meta charset="UTF-8">
     <title>Nambawan Trawel - организуем корпоративное путешествие для Ваших сотрудников и клиентов</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link href="scripts/onepage-scroll.css" rel="stylesheet" />
+    <!--<link href="scripts/onepage-scroll.css" rel="stylesheet" />-->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <!--<script src="node_modules/fullpage.js/dist/fullpage.js"></script>-->
-    <script src="scripts/jquery.onepage-scroll.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".slides").onepage_scroll({
-                sectionContainer: "section",
-                easing: "ease",
+    <!--<script src="scripts/jquery.onepage-scroll.min.js"></script>-->
+    <!--<script>-->
+        <!--$(document).ready(function() {-->
+            <!--$(".slides").onepage_scroll({-->
+                <!--sectionContainer: "section",-->
+                <!--easing: "ease",-->
 
-                animationTime: 1000,
-                pagination: true,
-                updateURL: false,
-                beforeMove: function(index) {},
-                afterMove: function(index) {},
-                loop: false,
-                keyboard: true,
-                responsiveFallback: false,
-                direction: "vertical"
-            });
-        });
+                <!--animationTime: 1000,-->
+                <!--pagination: true,-->
+                <!--updateURL: false,-->
+                <!--beforeMove: function(index) {},-->
+                <!--afterMove: function(index) {},-->
+                <!--loop: false,-->
+                <!--keyboard: true,-->
+                <!--responsiveFallback: false,-->
+                <!--direction: "vertical"-->
+            <!--});-->
+        <!--});-->
 
-    </script>
+    <!--</script>-->
 </head>
 <body>
 
     <div class="nav-left d-flex flex-column justify-content-between">
         <div class="menu">Меню</div>
-        <div class="social">Инстаграм / Вконтакте</div>
+        <div class="social d-flex">
+            <div class="socilal-vk">Вконтакте</div>
+            <div class="socilal-insta">Инстаграм</div>
+        </div>
     </div>
 
-    <div class="slides">
-        <section class="section section-first">
-            <div class="section-content">
-                <img src="img/logo.png" alt="Nambawan Travel" />
-                <a href="tel:+375299876543" >+375 29 987 65 43</a>
-                <div>Обратный звонок</div>
+    <section class="section section-first section-full-height">
+        <div class="section-content">
+            <img src="img/logo.png" alt="Nambawan Travel" />
+            <a href="tel:+375299876543" >+375 29 987 65 43</a>
+            <div>Обратный звонок</div>
 
 
-                <div> Мы в Nambawan Trawel</div>
-                <h1 class="section-title">Организуем корпоративное путешествие для Ваших сотрудников и клиентов</h1>
+            <div> Мы в Nambawan Trawel</div>
+            <h1 class="section-title">Организуем корпоративное путешествие для Ваших сотрудников и клиентов</h1>
 
-                <div class="our-benefits">
-                    <div class="our-benefit">Повышаем лояльность сотрудников;</div>
-                    <div class="our-benefit">Увеличиваем мотивацию сотрудников</div>
-                    <div class="our-benefit">Улучшаем имидж компании</div>
-                </div>
+            <div class="our-benefits">
+                <div class="our-benefit">Повышаем лояльность сотрудников;</div>
+                <div class="our-benefit">Увеличиваем мотивацию сотрудников</div>
+                <div class="our-benefit">Улучшаем имидж компании</div>
             </div>
 
+            <div class="btn">Мы в этом шарим!</div>
+        </div>
 
-        </section>
+
+    </section>
 
 
-        <section class="section section-second">
+    <section class="section section-second section-full-height">
 2
-        </section>
+    </section>
 
-        <section class="section section-third">
+    <section class="section section-third">
 3
-        </section>
+    </section>
 
-
-    </div>
 
     <footer class="page-footer">
 
+        <div class="container-fluid">
+            <div class="row tech-task">
+                <div class="col-12 col-sm-3 offset-sm-2">
+                    <div class="tech-task-label">Тестовое задание сделал:</div>
+                    <div class="tech-task-text">Роман Тюрин</div>
+                </div>
+                <div class="col-12 col-sm-3 offset-sm-2">
+                    <div class="tech-task-label">Затраченное время:</div>
+                    <div class="tech-task-text">2 часа</div>
+                </div>
+                <div class="col-12">
+                    <div class="tech-task-title">Мини ТЗ</div>
+                    <div class="tech-task-desc">Боковое меню фиксированное. Первые два экрана отображаются слайдами на всю высоту экрана, третий и четвертый экран - уже по всей своей длине. <br />
+                        Макет тестовый. Если, как вам кажется, чего-то не хватает — смело добавляйте или изменяйте. <strong>Анимации и другие эффекты дико приветствуются.</strong>
+                    </div>
+                    <div class="tech-task-faq">Если есть какие-либо вопросы  — пишите на почту, с которой прислали тестовое.</div>
+                </div>
+            </div>
+        </div>
     </footer>
-
 </body>
 </html>
