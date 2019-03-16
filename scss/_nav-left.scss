@@ -1,16 +1,88 @@
+$padding-y-nav-left: 20px;
+
+
 .nav-left {
   position: fixed;
   top: 0;
   left: 0;
   width: $nav-left-width;
   height: 100%;
+  padding: 45px $padding-y-nav-left $padding-y-nav-left $padding-y-nav-left;
   z-index: 100;
   background-color: white;
+  @media (max-height: 400px) {
+    padding-top: 10px;
+  }
+}
+
+.menu {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    &::before {
+      background-color: rgba($color-green, .4);
+    }
+    .menu-text {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -$padding-y-nav-left;
+    right: -$padding-y-nav-left;
+    bottom: -10px;
+    z-index: 1;
+    transition: .3s all ease-in-out;
+  }
+  &-icon, &-text {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-text {
+    font-family: $font-family-raleway-extrabold;
+    font-size: 11px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+    @media (max-height: 400px) {
+      display: none;
+    }
+  }
 }
 
 .social {
-  display: flex;
   transform: rotate(-90deg);
-  transform-origin: top left;
-  padding: 10px;
+  transform-origin: center center;
+  i {
+    font-size: 17px;
+    margin-right: 7px;
+    opacity: 0.5;
+  }
+  &-item {
+    font-family: $font-family-raleway;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 35px;
+    opacity: 0.4;
+    color: #000000;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    @media (max-height: 400px) {
+      margin-left: 10px;
+      .social-item-text {
+        display: none;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: .9;
+    }
+
+  }
+
 }

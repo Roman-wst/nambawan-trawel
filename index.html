@@ -4,81 +4,216 @@
     <meta charset="UTF-8">
     <title>Nambawan Trawel - организуем корпоративное путешествие для Ваших сотрудников и клиентов</title>
     <link href="css/style.css" rel="stylesheet" />
-    <!--<link href="scripts/onepage-scroll.css" rel="stylesheet" />-->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!--<script src="node_modules/fullpage.js/dist/fullpage.js"></script>-->
-    <!--<script src="scripts/jquery.onepage-scroll.min.js"></script>-->
-    <!--<script>-->
-        <!--$(document).ready(function() {-->
-            <!--$(".slides").onepage_scroll({-->
-                <!--sectionContainer: "section",-->
-                <!--easing: "ease",-->
-
-                <!--animationTime: 1000,-->
-                <!--pagination: true,-->
-                <!--updateURL: false,-->
-                <!--beforeMove: function(index) {},-->
-                <!--afterMove: function(index) {},-->
-                <!--loop: false,-->
-                <!--keyboard: true,-->
-                <!--responsiveFallback: false,-->
-                <!--direction: "vertical"-->
-            <!--});-->
-        <!--});-->
-
-    <!--</script>-->
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="node_modules/slick-carousel/slick/slick.css" rel="stylesheet">
 </head>
 <body>
 
     <div class="nav-left d-flex flex-column justify-content-between">
-        <div class="menu">Меню</div>
+        <div class="menu">
+            <img src="img/menu.png" alt="Меню" class="menu-icon" />
+            <div class="menu-text">Меню</div>
+        </div>
         <div class="social d-flex">
-            <div class="socilal-vk">Вконтакте</div>
-            <div class="socilal-insta">Инстаграм</div>
+            <a href="https://instagram.com/" class="social-item d-flex align-items-center" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span class="social-item-text">Инстаграм</span>
+            </a>
+            <a href="https://vk.com/" class="social-item d-flex align-items-center" target="_blank">
+                <i class="fab fa-vk"></i>
+                <span class="social-item-text">Вконтакте</span>
+            </a>
         </div>
     </div>
 
-    <section class="section section-first section-full-height">
+    <div class="nav-right nav-section d-flex flex-column align-items-end">
+        <span class="nav-section-item active" data-section="1"></span>
+        <span class="nav-section-item" data-section="2"></span>
+        <span class="nav-section-item" data-section="3"></span>
+    </div>
+
+    <section class="section section-1 section-full-height">
         <div class="section-content">
-            <img src="img/logo.png" alt="Nambawan Travel" />
-            <a href="tel:+375299876543" >+375 29 987 65 43</a>
-            <div>Обратный звонок</div>
+            <div class="container-fluid max-w-none d-flex flex-column">
+
+                <div class="row justify-content-between no-gutters">
+                    <div class="col-auto"><img src="img/logo.png" alt="Nambawan Travel" /></div>
+                    <div class="col-auto d-flex flex-column ">
+                        <a href="tel:+375299876543" class="phone">+375 29 987 65 43</a>
+                        <a class="callback">Обратный звонок</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-xl-10">
+                        <div class="we-in-nambawan">Мы в Nambawan Trawel</div>
+                        <h1 class="section-title">Организуем корпоративное путешествие для&nbsp;Ваших сотрудников и&nbsp;клиентов</h1>
+                    </div>
+                </div>
+
+                <div class="row our-benefits">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="our-benefit">Повышаем&nbsp;лояльность<br /> сотрудников</div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="our-benefit">Увеличиваем&nbsp;мотивацию<br /> сотрудников</div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="our-benefit">Улучшаем&nbsp;имидж<br /> компании</div>
+                    </div>
+                </div>
+
+                <div class="row mt-auto">
+                    <div class="col-12 offset-md-3 col-md-6 offset-lg-8 col-lg-4 offset-xl-9 col-xl-3">
+                        <div class="btn" data-section="2">
+                            <img src="img/arrow.png" alt="" class="btn-icon">
+                            <span class="btn-text">Мы в этом шарим!</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section section-2 section-full-height no-padding">
+       <div class="section-content">
+           <div class="container-fluid max-w-none">
+               <div class="row no-gutters">
+                   <div class="col-12 col-md-6">
+                       <div class="video">
+                           <video id="video">
+                               <source src="video/video.mp4" type="video/mp4">
+                               Your browser does not support the video tag.
+                           </video>
+                       </div>
+                   </div>
+                   <div class="col-12 col-md-6 section-text">
+                       <h2 class="section-title">
+                           Только с нами вы сможете знатно угареть!
+                       </h2>
+                       <div class="section-desc">
+                           Гляньте наше чумовое видео, если не верите.<br />
+                           Если хотите и вам такое же по итогу снимем —<br />
+                           будет что вспомнить.
+                       </div>
+                       <div class="d-flex">
+                           <div class="we-works d-flex flex-column justify-content-between">
+                               <div>
+                                   <img src="img/world.png" alt="" class="we-works-img"/>
+                               </div>
+                               <div class="we-works-text">
+                                   Работаем в любой<br />
+                                   точке планеты
+                               </div>
+                           </div>
+
+                           <div class="we-works d-flex flex-column justify-content-between">
+                               <div>
+                                   <img src="img/space.png" alt="" class="we-works-img"/>
+                               </div>
+                               <div class="we-works-text align-self-end">
+                                   Но если на Земле<br />
+                                   все видели, то no problem...
+                               </div>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </div>
 
 
-            <div> Мы в Nambawan Trawel</div>
-            <h1 class="section-title">Организуем корпоративное путешествие для Ваших сотрудников и клиентов</h1>
+    </section>
+    <section class="section section-3">
 
-            <div class="our-benefits">
-                <div class="our-benefit">Повышаем лояльность сотрудников;</div>
-                <div class="our-benefit">Увеличиваем мотивацию сотрудников</div>
-                <div class="our-benefit">Улучшаем имидж компании</div>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Как это было</h2>
+                </div>
+                <div class="col-12 col-md-6">
+
+                    <div class="gallery">
+
+                        <div class="slide">
+                            <img src="img/img-1.jpg" alt="" />
+                            <div class="slide-title">
+                                Покорили ледяные вершины
+                                с командой HBO
+                            </div>
+                            <div class="slide-tag">Восхождение</div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/img.jpg" alt="" />
+                            <div class="slide-title">
+                                Поплавали за рыбками
+                                с National Geographic
+                            </div>
+                            <div class="slide-tag">Погружение</div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-12 col-md-6">
+                    Находим
+                    сильные стороны
+                    вашей команды!
+
+                </div>
             </div>
 
-            <div class="btn">Мы в этом шарим!</div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="gallery">
+
+                        <div class="slide">
+                            <img src="img/img.jpg" alt="" />
+                            <div class="slide-title">
+                                Поплавали за рыбками
+                                с National Geographic
+                            </div>
+                            <div class="slide-tag">Погружение</div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/img-1.jpg" alt="" />
+                            <div class="slide-title">
+                                Покорили ледяные вершины
+                                с командой HBO
+                            </div>
+                            <div class="slide-tag">Восхождение</div>
+                        </div>
+
+                    </div>
+
+                    Создаем самую
+                    настощую
+                    dream-team!
+                    Поплавали за рыбками
+                    с National Geographic
+                    Погружение
+                </div>
+            </div>
+
         </div>
 
-
-    </section>
-
-
-    <section class="section section-second section-full-height">
-2
-    </section>
-
-    <section class="section section-third">
-3
     </section>
 
 
     <footer class="page-footer">
-
         <div class="container-fluid">
             <div class="row tech-task">
-                <div class="col-12 col-sm-3 offset-sm-2">
+                <div class="col-12 col-md-6 col-lg-3 offset-lg-2">
                     <div class="tech-task-label">Тестовое задание сделал:</div>
                     <div class="tech-task-text">Роман Тюрин</div>
                 </div>
-                <div class="col-12 col-sm-3 offset-sm-2">
+                <div class="col-12 col-md-6 col-lg-3 offset-lg-2">
                     <div class="tech-task-label">Затраченное время:</div>
                     <div class="tech-task-text">2 часа</div>
                 </div>
@@ -92,5 +227,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script src="scripts/nambawan.js"></script>
+
+
 </body>
 </html>

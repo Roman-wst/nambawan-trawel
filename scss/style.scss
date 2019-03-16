@@ -19,20 +19,100 @@ h1 {
 }
 
 
-
-
 @import "nav-left";
 
 .container-fluid {
   max-width: 1140px;
 }
 
+.max-w-none {
+  max-width: none;
+}
+
+/* phone and callback in header in first section */
+.phone {
+  font-family: $font-family-raleway-extrabold;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.callback {
+  font-family: $font-family-raleway-semibold;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  text-align: right;
+}
+
+/* navigation right */
+.nav-section {
+  position: fixed;
+  top: 45%;
+  right: 21px;
+  z-index: 100;
+  text-align: right;
+  &-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 19px;
+    height: 1px;
+    padding-top: 5px;
+    border-bottom: 1px solid #fff;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover, &.active {
+      width: 39px;
+      border-bottom-color: $color-green;
+    }
+    &.inverse-color:not(.active) {
+      border-bottom: 1px solid #000;
+    }
+    &.active {
+      border-bottom-width: 2px;
+    }
+    &:nth-child(2) {
+      top: 19px;
+    }
+    &:nth-child(3) {
+      top: 39px;
+    }
+  }
+}
+
 .section {
-  padding: 45px 100px 0 50px;
+  padding: 15px 15px 0 15px;
+  overflow: hidden;
+  @include media-breakpoint-up(xl) {
+    padding: 45px 85px 0 35px;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
   &-full-height {
     height: 100vh;
+    @media (max-height: 475px) {
+      height: auto;
+    }
+    @include media-breakpoint-up(sm) {
+
+    }
+    .section-content, .container-fluid {
+      height: 100%;
+    }
   }
-  &-first {
+
+  &-title {
+    color: #000000;
+    font-family: $font-family-raleway-extrabold;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+// first section
+  &-1 {
     position: relative;
     color: #fff;
     background: url(../img/mountain.jpg) center center no-repeat;
@@ -46,11 +126,183 @@ h1 {
       bottom: 0;
       background-color: rgba(21, 24, 30, .7);
     }
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     .section-content {
       position: relative;
       z-index: 10;
     }
+
+    .we-in-nambawan {
+      font-family: $font-family-raleway-extrabold;
+      font-size: 17px;
+      margin-top: 16vh;
+      margin-bottom: 35px;
+      color: $color-green;
+      letter-spacing: 1px;
+      @include media-breakpoint-up(md) {
+        font-size: 19px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 21px;
+      }
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 16.5vh;
+      font-size: 20px;
+      color: #fff;
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 40px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 56px;
+      }
+    }
+
+    @media (max-height: 740px) {
+      .we-in-nambawan {
+        margin-top: 7vh;
+        margin-bottom: 0;
+      }
+
+      .section-title {
+        margin-bottom: 7vh;
+        //font-size: 35px;
+      }
+    }
+
+    .our-benefit {
+      font-family: $font-family-raleway-semibold;
+      font-size: 15px;
+      max-width: 255px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(255,255,255, .5);
+    }
+  }
+
+
+// second section
+  &-2 {
+    color: #000;
+    .container-fluid {
+      padding: 0;
+    }
+    .row {
+      height: 100%;
+    }
+    .section-text {
+      padding: 15px;
+      @include media-breakpoint-up(md) {
+        padding: 110px 85px 70px 54px;
+      }
+    }
+
+    .section-desc {
+      font-family: $font-family-raleway;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 34px;
+      margin: 50px 0 95px;
+    }
   }
 }
 
+@import "slider";
+
+.we-works {
+  width: 256px;
+  height: 200px;
+  margin: 0 10px 10px;
+  padding: 30px 20px 30px;
+  background-color: #f2f2f2;
+  text-align: center;
+  &-text {
+    font-family: $font-family-raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+}
+
+/* btn we are sharim */
+.btn {
+  font-family: $font-family-raleway-extrabold;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 18px 10px 14px;
+  background-color: $color-green;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: lighten($color-green, 5%);
+  }
+  &-icon {
+    opacity: 1;
+    margin-right: 20px;
+    -webkit-animation: fadeInArrow 2s ease-in-out infinite;
+    -moz-animation: fadeInArrow 2s ease-in-out infinite;
+    -o-animation: fadeInArrow 2s ease-in-out infinite;
+    animation: fadeInArrow 2s ease-in-out infinite;
+  }
+}
+
+
+/* video on section 2*/
+.video {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    /*height: 100%;*/
+    min-height: 100%;
+  }
+  /*position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;*/
+}
+
+
+
 @import 'footer';
+
+
+
+/* animations opacity */
+@-webkit-keyframes fadeInArrow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeInArrow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeInArrow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInArrow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
