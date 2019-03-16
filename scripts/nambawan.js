@@ -39,8 +39,8 @@ $(document).ready(function() {
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        prevArrow: '<i class="fas fa-angle-left"></i>',
-        nextArrow: '<i class="fas fa-angle-right"></i>'
+        prevArrow: '<i class="fas fa-angle-left slick-arrow-left"></i>',
+        nextArrow: '<i class="fas fa-angle-right slick-arrow-right"></i>'
 
     });
 

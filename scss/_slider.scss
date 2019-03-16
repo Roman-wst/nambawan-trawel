@@ -1,0 +1,32 @@
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  color: #000;
+  background-color: #fff;
+  z-index: 100;
+  text-align: center;
+  &:hover {
+    background-color: $color-green;
+  }
+  &-left {
+    right: 40px;
+  }
+}
+
+
+.slide-tag {
+  font-family: $font-family-raleway-extrabold;
+  font-size: 11px;
+  line-height: 18px;
+  color: #b3b3b3;
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform-origin: top left;
+  text-transform: uppercase;
+}
