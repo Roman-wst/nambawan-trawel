@@ -27,21 +27,41 @@ $(document).ready(function() {
         }, 800);
     });
 
-    // init active link
+// init active link
     $(window).scroll();
 
 
+// click play video
+    $('.ic-play').click(function () {
+        $('#video').get(0).play();
+        $('.video').addClass('video-play');
+    });
 
-// run slider
-    $('.gallery').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        prevArrow: '<i class="fas fa-angle-left slick-arrow-left"></i>',
-        nextArrow: '<i class="fas fa-angle-right slick-arrow-right"></i>'
+    $('.ic-pause').click(function () {
+        $('#video').get(0).pause();
+        $('.video').removeClass('video-play');
+    });
 
+
+// run sliders
+    $('.gallery').each(function () {
+        let $gallery = $(this),
+            $slides = $('.slides', $gallery),
+            $slide_count = $('.slide-count', $gallery);
+
+        $slides.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+            let i = (currentSlide ? currentSlide : 0) + 1;
+            $slide_count.html('<strong>' + i + '</strong>' + '&nbsp;/&nbsp;' + slick.slideCount);
+        });
+
+        $slides.slick({
+            //dots: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            prevArrow: '<i class="fas fa-angle-left slick-arrow-left"></i>',
+            nextArrow: '<i class="fas fa-angle-right slick-arrow-right"></i>'
+        });
     });
 
 });

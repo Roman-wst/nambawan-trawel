@@ -1,9 +1,7 @@
 @import "variables";
-
 @import "../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/reboot";
-
 @import "fonts";
 
 body {
@@ -18,9 +16,6 @@ h1 {
   font: 56px $font-family-raleway-extrabold;
 }
 
-
-@import "nav-left";
-
 .container-fluid {
   max-width: 1140px;
 }
@@ -28,6 +23,8 @@ h1 {
 .max-w-none {
   max-width: none;
 }
+
+@import "nav-left";
 
 /* phone and callback in header in first section */
 .phone {
@@ -63,13 +60,13 @@ h1 {
     cursor: pointer;
     &:hover, &.active {
       width: 39px;
-      border-bottom-color: $color-green;
     }
     &.inverse-color:not(.active) {
       border-bottom: 1px solid #000;
     }
     &.active {
       border-bottom-width: 2px;
+      border-bottom-color: $color-green;
     }
     &:nth-child(2) {
       top: 19px;
@@ -132,7 +129,7 @@ h1 {
         text-decoration: none;
       }
     }
-    .section-content {
+    &-content {
       position: relative;
       z-index: 10;
     }
@@ -152,7 +149,7 @@ h1 {
       }
     }
 
-    .section-title {
+    &-title {
       max-width: 780px;
       margin-bottom: 16.5vh;
       font-size: 20px;
@@ -189,7 +186,6 @@ h1 {
     }
   }
 
-
 // second section
   &-2 {
     color: #000;
@@ -206,22 +202,45 @@ h1 {
       }
     }
 
-    .section-desc {
+    &-desc {
       font-family: $font-family-raleway;
       font-size: 21px;
       font-weight: 400;
       line-height: 34px;
-      margin: 50px 0 95px;
+      margin: 50px 0 20px;
+    }
+  }
+
+// third section
+  &-3 {
+    &-title {
+      margin: 33px 0 78px 0;
+      text-align: center;
+    }
+    &-text {
+      font-family: $font-family-raleway;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 40px;
+      max-width: 280px;
+      color: #999999;
+      text-align: center;
+    }
+    .how-it-was {
+      margin-bottom: 57px;
     }
   }
 }
 
-@import "slider";
+.selection {
+  color: $color-green;
+}
 
+/* in section 2 */
 .we-works {
   width: 256px;
   height: 200px;
-  margin: 0 10px 10px;
+  margin: 0 20px 10px 0;
   padding: 30px 20px 30px;
   background-color: #f2f2f2;
   text-align: center;
@@ -256,31 +275,61 @@ h1 {
   }
 }
 
-
 /* video on section 2*/
 .video {
   position: relative;
   height: 100%;
+  min-height: 300px;
   overflow: hidden;
   video {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
-    /*height: 100%;*/
     min-height: 100%;
   }
-  /*position:relative;
-  padding-bottom:56.25%;
-  height:0;
-  overflow:hidden;*/
+  &-preview {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url(../img/bg-video.jpg) center center no-repeat;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+  .ic {
+    &-play-pause {
+      cursor: pointer;
+    }
+    &-pause {
+      display: none;
+      font-size: 20px;
+      color: $color-green;
+    }
+  }
+  &-play {
+    .video-preview {
+      background: none;
+    }
+    .ic-play-pause img, .play-text {
+      display: none;
+    }
+    .ic-pause {
+      display: block;
+    }
+  }
+  .play-text {
+    font-family: $font-family-raleway;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-top: 21px;
+    color: #fff;
+  }
 }
 
-
-
+@import "slider";
 @import 'footer';
-
-
 
 /* animations opacity */
 @-webkit-keyframes fadeInArrow {
